@@ -21,8 +21,8 @@ class Rectangle extends Shape{
 class  MoveablePoints implements Moveable{
     int x;
     public void Move(int a,int b,int c){
-        x+=a;
-        y+=b;
+        x+=a*c;
+        y+=b*c;
     };
     public void setSpeed(int speed) {
         this.speed = speed;
@@ -86,7 +86,7 @@ class Main{
 
 /*@startuml
 interface Moveable{
-
+    Move(int a,int b,int c): void
 }
 
 
@@ -96,17 +96,18 @@ class Rectangle extends shape{
     toString(): String
 }
 class  MoveableRectangle extends Rectangle implements Moveable{
-one: MoveablePonts
-two: MoveablePonts
-isEqual(): boolean
+    one: MoveablePonts
+    two: MoveablePonts
+    isEqual(): boolean
+    Move(int a,int b,int c): void
 }
 
 class  MoveablePoints implements Moveable{
-x: int
-y: int
-speed: int
-getCord(): int
+    x: int
+    y: int
+    speed: int
+    getCord(): int
+    Move(int a,int b,int c): void
 }
  MoveablePoints --o MoveableRectangle
-@enduml
- */
+@enduml*/
